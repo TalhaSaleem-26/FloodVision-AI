@@ -1,0 +1,47 @@
+experiment:
+  name: baseline_cnn_weighted_bce_dice_v1
+  seed: 42
+
+model:
+  name: baseline_cnn
+  in_channels: 2
+  out_channels: 1
+  base_channels: 16
+
+training:
+  epochs: 30
+  batch_size: 4
+  num_workers: 0
+  device: auto
+
+optimizer:
+  name: adamw
+  learning_rate: 0.001
+  weight_decay: 0.0001
+
+loss:
+  name: bce_dice
+  bce_weight: 0.5
+  dice_weight: 0.5
+  pos_weight: 10.67560247352706
+
+scheduler:
+  name: reduce_on_plateau
+  mode: max
+  factor: 0.5
+  patience: 3
+  min_lr: 0.000001
+
+early_stopping:
+  patience: 7
+  min_delta: 0.0001
+
+metrics:
+  threshold: 0.5
+  monitor: iou
+
+data:
+  dataset_config: configs/dataset.yaml
+  preprocessing_config: configs/preprocessing.yaml
+  train_split: data/splits/geographical/train.csv
+  val_split: data/splits/geographical/val.csv

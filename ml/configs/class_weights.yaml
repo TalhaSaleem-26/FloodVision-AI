@@ -1,0 +1,9 @@
+split: train
+samples: 340
+water_pixels: 6557923
+non_water_pixels: 70009779
+invalid_pixels: 12561258
+valid_pixels: 76567702
+water_percentage: 8.564868513358283
+non_water_percentage: 91.43513148664172
+pos_weight: 10.67560247352706

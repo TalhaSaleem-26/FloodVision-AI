@@ -1,0 +1,30 @@
+dataset:
+  name: Sen1Floods11
+  version: "1.1"
+
+  root_dir: data/raw/Sen1Floods11
+
+  image_dir: S1Hand
+  mask_dir: LabelHand
+
+  image_height: 512
+  image_width: 512
+
+  input_channels: 2
+  output_channels: 1
+
+  bands:
+    - VV
+    - VH
+
+  labels:
+    no_data: -1
+    non_water: 0
+    water: 1
+
+  ignore_index: -1
+
+  bucket: sen1floods11
+  remote_prefix: v1.1/data/flood_events/HandLabeled
+
+  seed: 42

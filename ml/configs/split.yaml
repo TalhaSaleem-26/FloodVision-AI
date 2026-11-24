@@ -1,0 +1,20 @@
+split:
+  strategy: geographical
+  seed: 42
+
+  train_regions:
+    - USA
+    - India
+    - Paraguay
+    - Ghana
+    - Sri-Lanka
+    - Somalia
+    - Bolivia
+
+  val_regions:
+    - Mekong
+    - Nigeria
+
+  test_regions:
+    - Pakistan
+    - Spain

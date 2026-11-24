@@ -1,0 +1,22 @@
+preprocessing:
+  method: percentile_zscore
+  fit_split: geographical/train
+  clip_percentiles:
+  - 1
+  - 99
+  sampling_seed: 42
+  max_pixels_per_image: 5000
+  epsilon: 1.0e-08
+  invalid_fill_value: 0.0
+  ignore_index: -1
+  channels:
+    VV:
+      clip_min: -23.311841430664064
+      clip_max: -2.500903544425962
+      mean: -10.262364352688039
+      std: 3.741767721501344
+    VH:
+      clip_min: -32.127178802490235
+      clip_max: -9.392355871200557
+      mean: -16.962837435817455
+      std: 4.201248726531696

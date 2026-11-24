@@ -1,0 +1,53 @@
+@'
+# Python environments
+.venv/
+venv/
+env/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Datasets
+ml/data/raw/
+ml/data/processed/
+
+# ML artifacts
+ml/checkpoints/
+ml/experiments/
+*.pt
+*.pth
+*.ckpt
+mlruns/
+mlartifacts/
+
+# Secrets
+.env
+.env.*
+!.env.example
+kaggle.json
+
+# Frontend
+node_modules/
+dist/
+build/
+
+# IDE
+.vscode/
+.idea/
+
+# Archives
+*.zip
+*.tar.gz
+
+# OS
+.DS_Store
+Thumbs.db
+'@ | Set-Content -Encoding ascii .gitignore
