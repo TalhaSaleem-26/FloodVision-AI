@@ -1,0 +1,22 @@
+{
+    "bundle_version": "1.0.0",
+    "hash_algorithm": "SHA-256",
+    "files": {
+        "floodvision_mobilenetv3_v1.pt": {
+            "size_bytes": 4327021,
+            "sha256": "7c1011c219ac750ed039ca2d886ef573480001bf8bb5470b3d131c1aa9defd95"
+        },
+        "preprocessing.yaml": {
+            "size_bytes": 513,
+            "sha256": "b0d426191764c33afc8d4702f2550b09e18855ddf735da77b1a55d0084a88522"
+        },
+        "metadata.json": {
+            "size_bytes": 2010,
+            "sha256": "794a615fac6e4146fc5dde1a554dc2df3fa5739ed3a95563f9d48baf8bd09219"
+        },
+        "MODEL_CARD.md": {
+            "size_bytes": 1748,
+            "sha256": "353b9c49fd463cf9c535a5ea67e5058376fb36db3d87a7d76b8a2e6f66e08c03"
+        }
+    }
+}

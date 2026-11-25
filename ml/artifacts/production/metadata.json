@@ -1,0 +1,76 @@
+{
+    "project": "FloodVision AI",
+    "model_name": "MobileNetV3 U-Net",
+    "model_version": "1.0.0",
+    "artifact_format_version": 1,
+    "experiment_id": "EXP007",
+    "checkpoint_epoch": 18,
+    "created_at": "2026-11-25T13:23:46.679946+00:00",
+    "task": "binary_water_segmentation",
+    "architecture": {
+        "encoder": "MobileNetV3-Small",
+        "decoder": "Lightweight U-Net Decoder",
+        "parameters": 1034057,
+        "pretrained_encoder_during_training": true
+    },
+    "input": {
+        "bands": [
+            "VV",
+            "VH"
+        ],
+        "channels": 2,
+        "height": 512,
+        "width": 512,
+        "dtype": "float32",
+        "layout": "NCHW"
+    },
+    "output": {
+        "channels": 1,
+        "type": "logits",
+        "activation": "sigmoid",
+        "threshold": 0.5,
+        "labels": {
+            "-1": "invalid",
+            "0": "non-water",
+            "1": "water"
+        }
+    },
+    "dataset": {
+        "name": "Sen1Floods11",
+        "training_samples": 340,
+        "validation_samples": 48,
+        "test_samples": 58,
+        "test_regions": [
+            "Pakistan",
+            "Spain"
+        ]
+    },
+    "performance": {
+        "validation_iou": 0.834588667782897,
+        "validation_dice": 0.909837,
+        "test_iou": 0.517622,
+        "test_dice": 0.682149,
+        "test_precision": 0.56621,
+        "test_recall": 0.857794,
+        "pakistan_iou": 0.272779,
+        "spain_iou": 0.69763
+    },
+    "benchmark": {
+        "batch_size": 1,
+        "cpu_latency_ms": 71.9927,
+        "gpu_latency_ms": 9.3479,
+        "gpu_throughput_images_sec": 106.9757,
+        "peak_gpu_memory_mib": 78.7271,
+        "scope": "Model inference benchmark"
+    },
+    "runtime": {
+        "python": "3.13.16",
+        "pytorch": "2.11.0+cu130",
+        "torchvision": "0.26.0+cu130"
+    },
+    "artifact": {
+        "filename": "floodvision_mobilenetv3_v1.pt",
+        "size_bytes": 4327021
+    },
+    "deployment_status": "research_prototype"
+}
