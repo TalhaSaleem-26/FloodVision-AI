@@ -1,10 +1,12 @@
 from .baseline_cnn import BaselineCNN
 from .unet import UNet
+from .resnet_unet import ResNetUNet
 
 
 MODEL_REGISTRY = {
     "baseline_cnn": BaselineCNN,
     "unet": UNet,
+    "resnet_unet": ResNetUNet
 }
 
 
@@ -12,14 +14,11 @@ def build_model(config):
 
     config = config.copy()
 
-    model_name = config.pop("name")
+    name = config.pop("name")
 
-    if model_name not in MODEL_REGISTRY:
+    if name not in MODEL_REGISTRY:
         raise ValueError(
-            f"Unsupported model: {model_name}. "
-            f"Available models: {list(MODEL_REGISTRY.keys())}"
+            f"Unsupported model: {name}"
         )
 
-    model_class = MODEL_REGISTRY[model_name]
-
-    return model_class(**config)
+    return MODEL_REGISTRY[name](**config)
