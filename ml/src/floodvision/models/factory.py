@@ -1,8 +1,10 @@
-from floodvision.models.baseline_cnn import BaselineCNN
+from .baseline_cnn import BaselineCNN
+from .unet import UNet
 
 
 MODEL_REGISTRY = {
-    "baseline_cnn": BaselineCNN
+    "baseline_cnn": BaselineCNN,
+    "unet": UNet,
 }
 
 
@@ -10,14 +12,14 @@ def build_model(config):
 
     config = config.copy()
 
-    name = config.pop("name")
+    model_name = config.pop("name")
 
-    if name not in MODEL_REGISTRY:
-
+    if model_name not in MODEL_REGISTRY:
         raise ValueError(
-            f"Unsupported model: {name}"
+            f"Unsupported model: {model_name}. "
+            f"Available models: {list(MODEL_REGISTRY.keys())}"
         )
 
-    model_class = MODEL_REGISTRY[name]
+    model_class = MODEL_REGISTRY[model_name]
 
     return model_class(**config)
