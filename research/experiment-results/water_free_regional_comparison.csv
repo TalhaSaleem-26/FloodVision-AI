@@ -1,0 +1,5 @@
+architecture,region,samples,false_positives,valid_pixels,clean_predictions,fpr_percent
+Baseline CNN,Pakistan,7,229083,1440838,0,15.899289163667255
+MobileNetV3 U-Net,Pakistan,7,202493,1440838,0,14.0538353374911
+ResNet18 U-Net,Pakistan,7,199824,1440838,0,13.868595914322082
+U-Net,Pakistan,7,312191,1440838,0,21.667321378253487

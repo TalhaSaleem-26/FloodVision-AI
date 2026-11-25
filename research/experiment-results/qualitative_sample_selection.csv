@@ -1,0 +1,7 @@
+region,category,sample_index,sample_id,mobilenet_iou,water_pixels
+Pakistan,Worst,10,Pakistan_366265,0.0,2
+Pakistan,Median,17,Pakistan_664885,0.2866281215401648,2383
+Pakistan,Best,9,Pakistan_35915,0.8025636281057076,52301
+Spain,Worst,30,Spain_2472849,0.028052805280528052,20
+Spain,Median,32,Spain_2594119,0.5128915405923716,2877
+Spain,Best,41,Spain_5923267,0.9659853825444739,201713
