@@ -1,0 +1,8 @@
+test,passed,exception,message
+Missing satellite input,True,InputValidationError,Input raster not found: C:\Users\User\AppData\Local\Temp\floodvision_pipeline_s4r_5rif\missing_7012c7e355cb42fdb0f57d630d0a1441.tif
+Unsupported file format,True,InputValidationError,Only .tif and .tiff files are supported.
+Incorrect SAR band count,True,InputValidationError,"Expected 2 channels, got 1."
+Existing output directory,True,InferenceError,Output directory already exists: D:\FloodVision-AI\ml\artifacts\pipeline_validation\analysis_556b29a0812b
+Maximum pixel limit exceeded,True,PredictionError,Raster exceeds maximum supported pixel count.
+Maximum tile limit exceeded,True,PredictionError,Raster exceeds maximum supported tile count.
+Unexpected processing failure,True,RuntimeError,Simulated vector processing failure

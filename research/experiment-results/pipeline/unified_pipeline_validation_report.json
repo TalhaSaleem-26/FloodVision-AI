@@ -1,0 +1,231 @@
+{
+    "project": "FloodVision AI",
+    "phase": "42 - Unified Inference Pipeline",
+    "created_at": "2026-11-26T08:15:04.495256+00:00",
+    "model": {
+        "model_name": "MobileNetV3 U-Net",
+        "model_version": "1.0.0",
+        "device": "cpu",
+        "parameters": 1034057,
+        "trainable_parameters": 0,
+        "training_mode": false,
+        "threshold": 0.5,
+        "input_bands": [
+            "VV",
+            "VH"
+        ],
+        "tile_height": 512,
+        "tile_width": 512,
+        "status": "ready"
+    },
+    "audit": {
+        "total_checks": 15,
+        "passed": 15,
+        "failed": 0,
+        "checks": {
+            "Production model ready": true,
+            "Full pipeline completed": true,
+            "Full artifact count": true,
+            "Inference-only mode": true,
+            "Raster-only mode": true,
+            "Disk-backed mode": true,
+            "Storage mask equivalence": true,
+            "Storage probability equivalence": true,
+            "Large raster integration": true,
+            "Large raster tile processing": true,
+            "Invalid pixel preservation": true,
+            "All-invalid handling": true,
+            "Geometry fallback": true,
+            "Exception protection": true,
+            "Pipeline recovery": true
+        }
+    },
+    "reference_sample": {
+        "sample_id": "Mekong_1111068",
+        "statistics": {
+            "total_pixels": 262144,
+            "valid_pixels": 262144,
+            "invalid_pixels": 0,
+            "water_pixels": 66106,
+            "non_water_pixels": 196038,
+            "water_coverage": 25.217437744140625,
+            "non_water_coverage": 74.78256225585938,
+            "valid_percentage": 100.0,
+            "mean_water_probability": 0.24564292287400458,
+            "tiles_added": 1
+        },
+        "area_analytics": {
+            "method": "wgs84_geodesic_row_weighted",
+            "total_area_m2": 25482121.25543022,
+            "valid_area_m2": 25482121.25543022,
+            "invalid_area_m2": 0.0,
+            "water_area_m2": 6425933.139488682,
+            "non_water_area_m2": 19056188.11594154,
+            "water_area_km2": 6.4259331394886825,
+            "water_area_hectares": 642.5933139488682,
+            "water_area_percentage": 25.21741842084407
+        },
+        "geometry_fidelity": {
+            "original": {
+                "passed": true,
+                "geometry_iou": 1.0,
+                "changed_pixels": 0,
+                "invalid_pixel_encroachment": 0,
+                "overlap_area_m2": 0.0,
+                "original_water_pixels": 66106,
+                "reconstructed_water_pixels": 66106
+            },
+            "simplified": {
+                "passed": true,
+                "geometry_iou": 1.0,
+                "changed_pixels": 0,
+                "invalid_pixel_encroachment": 0,
+                "overlap_area_m2": 5.587935447692871e-09,
+                "original_water_pixels": 66106,
+                "reconstructed_water_pixels": 66106
+            },
+            "fallback_used": false,
+            "selected_variant": "processed"
+        },
+        "timing": {
+            "inference_ms": 518.548300024122,
+            "average_tile_inference_ms": 518.548300024122,
+            "processing_ms": 933.039799972903,
+            "area_analysis_ms": 49.17600000044331,
+            "raster_export_ms": 232.35569999087602,
+            "vector_processing_ms": 2075.04239998525,
+            "pipeline_processing_ms": 3405.7356999837793
+        }
+    },
+    "large_raster_validation": {
+        "synthetic_input": true,
+        "statistics": {
+            "total_pixels": 1048576,
+            "valid_pixels": 786432,
+            "invalid_pixels": 262144,
+            "water_pixels": 147505,
+            "non_water_pixels": 638927,
+            "water_coverage": 18.756230672200523,
+            "non_water_coverage": 81.24376932779947,
+            "valid_percentage": 75.0,
+            "mean_water_probability": 0.211568917579402,
+            "tiles_added": 8
+        },
+        "tiling": {
+            "tile_size": 512,
+            "overlap": 128,
+            "stride": 384,
+            "storage": "memory",
+            "total_tiles": 9,
+            "processed_tiles": 8,
+            "skipped_tiles": 1
+        },
+        "area_analytics": {
+            "method": "wgs84_geodesic_row_weighted",
+            "total_area_m2": 101936961.98896404,
+            "valid_area_m2": 76454840.73353381,
+            "invalid_area_m2": 25482121.25543022,
+            "water_area_m2": 14340112.565873172,
+            "non_water_area_m2": 62114728.16766064,
+            "water_area_km2": 14.340112565873172,
+            "water_area_hectares": 1434.0112565873171,
+            "water_area_percentage": 18.756317361058166
+        },
+        "geometry_fidelity": {
+            "original": {
+                "passed": true,
+                "geometry_iou": 1.0,
+                "changed_pixels": 0,
+                "invalid_pixel_encroachment": 0,
+                "overlap_area_m2": 1.30385160446167e-08,
+                "original_water_pixels": 147505,
+                "reconstructed_water_pixels": 147505
+            },
+            "simplified": {
+                "passed": true,
+                "geometry_iou": 1.0,
+                "changed_pixels": 0,
+                "invalid_pixel_encroachment": 0,
+                "overlap_area_m2": 9.313225746154785e-09,
+                "original_water_pixels": 147505,
+                "reconstructed_water_pixels": 147505
+            },
+            "fallback_used": false,
+            "selected_variant": "processed"
+        },
+        "timing": {
+            "inference_ms": 3135.6232999823987,
+            "average_tile_inference_ms": 391.95291249779984,
+            "processing_ms": 4000.9052000241354,
+            "area_analysis_ms": 88.87900004629046,
+            "raster_export_ms": 455.82769997417927,
+            "vector_processing_ms": 4768.067700031679,
+            "pipeline_processing_ms": 9397.510100039653
+        }
+    },
+    "all_invalid_validation": {
+        "statistics": {
+            "total_pixels": 262144,
+            "valid_pixels": 0,
+            "invalid_pixels": 262144,
+            "water_pixels": 0,
+            "non_water_pixels": 0,
+            "water_coverage": null,
+            "non_water_coverage": null,
+            "valid_percentage": 0.0,
+            "mean_water_probability": null,
+            "tiles_added": 0
+        },
+        "tiling": {
+            "tile_size": 512,
+            "overlap": 128,
+            "stride": 384,
+            "storage": "memory",
+            "total_tiles": 1,
+            "processed_tiles": 0,
+            "skipped_tiles": 1
+        },
+        "warnings": [
+            "Input raster contains no valid pixels."
+        ]
+    },
+    "fallback_validation": {
+        "simulated_failure": true,
+        "geometry_fidelity": {
+            "original": {
+                "passed": true,
+                "geometry_iou": 1.0,
+                "changed_pixels": 0,
+                "invalid_pixel_encroachment": 0,
+                "overlap_area_m2": 0.0,
+                "original_water_pixels": 66106,
+                "reconstructed_water_pixels": 66106
+            },
+            "simplified": {
+                "passed": false,
+                "geometry_iou": 0.95,
+                "changed_pixels": 100,
+                "invalid_pixel_encroachment": 0,
+                "overlap_area_m2": 5.587935447692871e-09,
+                "original_water_pixels": 66106,
+                "reconstructed_water_pixels": 66106
+            },
+            "fallback_used": true,
+            "selected_variant": "original"
+        },
+        "warnings": [
+            "Simplified geometry failed fidelity validation. Original geometry retained."
+        ]
+    },
+    "exception_tests": {
+        "total": 7,
+        "passed": 7
+    },
+    "limitations": [
+        "Research prototype, not an emergency warning system.",
+        "Predicted water is not confirmed flood extent.",
+        "Synthetic integration tests do not establish geographical accuracy.",
+        "Single-run processing times are not formal benchmarks.",
+        "Automated regression testing remains pending."
+    ]
+}

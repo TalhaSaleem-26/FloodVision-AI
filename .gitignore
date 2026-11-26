@@ -42,11 +42,12 @@ build/
 # IDE
 .vscode/
 .idea/
-
+/ml/outputs/
+/ml/artifacts/
 # Archives
 *.zip
 *.tar.gz
-
+# Generated inference outputs
 # OS
 .DS_Store
 Thumbs.db
