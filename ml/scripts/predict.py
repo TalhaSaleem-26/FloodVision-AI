@@ -84,7 +84,7 @@ def build_parser():
 
     parser.add_argument(
         "--memory-budget-mib",
-        type=float,
+        type=int,
         default=128
     )
 

@@ -59,3 +59,10 @@ Thumbs.db
 .coverage.*
 htmlcov/
 coverage.xml
+
+# Phase 43 generated local coverage reports
+/ml/phase43-htmlcov/
+/ml/phase43-baseline.json
+/ml/phase43-final.json
+/ml/phase43-coverage.xml
+/ml/phase43-terminal.txt
