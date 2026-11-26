@@ -2,6 +2,7 @@
 requires = ["setuptools>=68"]
 build-backend = "setuptools.build_meta"
 
+
 [project]
 name = "floodvision"
 version = "0.1.0"
@@ -21,18 +22,63 @@ dependencies = [
     "scikit-learn",
     "tqdm",
     "pyyaml",
-    "google-cloud-storage"
+    "google-cloud-storage",
+    "pyproj",
+    "shapely>=2.1",
+    "geopandas",
+    "psutil"
 ]
+
 
 [project.optional-dependencies]
 dev = [
-    "pytest",
+    "pytest>=8.0",
+    "pytest-cov",
+    "pytest-mock",
     "jupyter",
     "ipykernel"
 ]
 
+
 [tool.setuptools.packages.find]
 where = ["src"]
 
+
 [tool.pytest.ini_options]
+minversion = "8.0"
+
 testpaths = ["tests"]
+
+pythonpath = ["src"]
+
+python_files = ["test_*.py"]
+
+python_classes = ["Test*"]
+
+python_functions = ["test_*"]
+
+addopts = "-ra --strict-markers"
+
+markers = [
+    "unit: isolated component tests",
+    "integration: multiple component tests",
+    "e2e: end-to-end application tests",
+    "regression: prediction consistency tests",
+    "slow: computationally expensive tests",
+    "requires_model: requires production model bundle",
+    "requires_data: requires external satellite data"
+]
+
+
+[tool.coverage.run]
+source = ["floodvision"]
+branch = true
+
+
+[tool.coverage.report]
+show_missing = true
+skip_empty = true
+
+
+[tool.coverage.html]
+directory = "htmlcov"
