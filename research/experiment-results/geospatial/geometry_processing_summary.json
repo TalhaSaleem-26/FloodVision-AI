@@ -1,0 +1,17 @@
+{
+    "crs": "EPSG:4326",
+    "tolerance_m": 5.0,
+    "max_area_change_percentage": 1.0,
+    "region_count": 182,
+    "repaired_regions": 0,
+    "simplified_regions": 124,
+    "original_vertices": 10239,
+    "processed_vertices": 8087,
+    "vertex_reduction_percentage": 21.0176775075691,
+    "original_area_m2": 6425933.066247962,
+    "processed_area_m2": 6425933.0780409,
+    "processing_ms": 157.7574000111781,
+    "reconstruction_iou": 1.0,
+    "changed_pixels": 0,
+    "invalid_pixel_encroachment": 0
+}

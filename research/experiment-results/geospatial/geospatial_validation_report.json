@@ -1,0 +1,128 @@
+{
+    "project": "FloodVision AI",
+    "phase": "41",
+    "model_version": "1.0.0",
+    "sample_id": "Mekong_1111068",
+    "task": "binary_water_segmentation",
+    "geospatial_metadata": {
+        "width": 512,
+        "height": 512,
+        "crs": "EPSG:4326",
+        "crs_type": "geographic",
+        "coordinate_unit": "degree",
+        "bounds": {
+            "left": 105.83160160046177,
+            "bottom": 12.00436680474599,
+            "right": 105.8775953430087,
+            "top": 12.05036054729291
+        },
+        "resolution": {
+            "x": 8.983152841195215e-05,
+            "y": 8.983152841195215e-05,
+            "unit": "degree"
+        },
+        "center": {
+            "x": 105.85459847173523,
+            "y": 12.02736367601945,
+            "longitude": 105.85459847173523,
+            "latitude": 12.02736367601945
+        },
+        "affine_transform": [
+            8.983152841195215e-05,
+            0.0,
+            105.83160160046177,
+            0.0,
+            -8.983152841195215e-05,
+            12.05036054729291
+        ]
+    },
+    "area_analytics": {
+        "method": "wgs84_geodesic_row_weighted",
+        "total_area_m2": 25482121.25543022,
+        "valid_area_m2": 25482121.25543022,
+        "invalid_area_m2": 0.0,
+        "water_area_m2": 6425933.139488682,
+        "non_water_area_m2": 19056188.11594154,
+        "water_area_km2": 6.4259331394886825,
+        "water_area_hectares": 642.5933139488682,
+        "water_area_percentage": 25.21741842084407
+    },
+    "vectorization": {
+        "crs": "EPSG:4326",
+        "connectivity": 4,
+        "region_count": 182,
+        "total_area_m2": 6425933.066247962,
+        "total_area_km2": 6.425933066247962,
+        "largest_region": {
+            "region_id": 103,
+            "geometry_type": "Polygon",
+            "area_m2": 3526187.5759237446,
+            "area_km2": 3.5261875759237444,
+            "area_hectares": 352.61875759237444
+        },
+        "processing_ms": 151.58960002008826
+    },
+    "geometry_processing": {
+        "crs": "EPSG:4326",
+        "tolerance_m": 5.0,
+        "max_area_change_percentage": 1.0,
+        "region_count": 182,
+        "repaired_regions": 0,
+        "simplified_regions": 124,
+        "original_vertices": 10239,
+        "processed_vertices": 8087,
+        "vertex_reduction_percentage": 21.0176775075691,
+        "original_area_m2": 6425933.066247962,
+        "processed_area_m2": 6425933.0780409,
+        "reconstruction_iou": 1.0,
+        "changed_pixels": 0,
+        "invalid_pixel_encroachment": 0
+    },
+    "geojson_export": {
+        "original_bytes": 467049,
+        "simplified_bytes": 421230,
+        "size_reduction_percentage": 9.810319688084125
+    },
+    "artifacts": [
+        {
+            "filename": "Mekong_1111068_water_mask.tif",
+            "size_bytes": 11147
+        },
+        {
+            "filename": "Mekong_1111068_water_probability.tif",
+            "size_bytes": 956272
+        },
+        {
+            "filename": "Mekong_1111068_water_regions_original.geojson",
+            "size_bytes": 467049
+        },
+        {
+            "filename": "Mekong_1111068_water_regions_simplified.geojson",
+            "size_bytes": 421230
+        },
+        {
+            "filename": "geometry_processing_results.csv",
+            "size_bytes": 23656
+        },
+        {
+            "filename": "geometry_simplification_benchmark.csv",
+            "size_bytes": 432
+        },
+        {
+            "filename": "geometry_processing_summary.json",
+            "size_bytes": 523
+        },
+        {
+            "filename": "geojson_export_benchmark.csv",
+            "size_bytes": 199
+        }
+    ],
+    "deployment_status": "research_prototype",
+    "limitations": [
+        "Predicted water is not confirmed flood extent.",
+        "Area analytics currently supports north-up WGS84 rasters.",
+        "Vectorization has configured resource limits.",
+        "Simplification fidelity requires per-raster validation.",
+        "Antimeridian-crossing geometries are outside supported scope."
+    ]
+}

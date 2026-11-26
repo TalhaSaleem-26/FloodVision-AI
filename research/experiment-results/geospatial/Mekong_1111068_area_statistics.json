@@ -1,0 +1,48 @@
+{
+    "sample_id": "Mekong_1111068",
+    "model_version": "1.0.0",
+    "task": "binary_water_segmentation",
+    "geospatial": {
+        "width": 512,
+        "height": 512,
+        "crs": "EPSG:4326",
+        "crs_type": "geographic",
+        "coordinate_unit": "degree",
+        "bounds": {
+            "left": 105.83160160046177,
+            "bottom": 12.00436680474599,
+            "right": 105.8775953430087,
+            "top": 12.05036054729291
+        },
+        "resolution": {
+            "x": 8.983152841195215e-05,
+            "y": 8.983152841195215e-05,
+            "unit": "degree"
+        },
+        "center": {
+            "x": 105.85459847173523,
+            "y": 12.02736367601945,
+            "longitude": 105.85459847173523,
+            "latitude": 12.02736367601945
+        },
+        "affine_transform": [
+            8.983152841195215e-05,
+            0.0,
+            105.83160160046177,
+            0.0,
+            -8.983152841195215e-05,
+            12.05036054729291
+        ]
+    },
+    "area_statistics": {
+        "method": "wgs84_geodesic_row_weighted",
+        "total_area_m2": 25482121.25543022,
+        "valid_area_m2": 25482121.25543022,
+        "invalid_area_m2": 0.0,
+        "water_area_m2": 6425933.139488682,
+        "non_water_area_m2": 19056188.11594154,
+        "water_area_km2": 6.4259331394886825,
+        "water_area_hectares": 642.5933139488682,
+        "water_area_percentage": 25.21741842084407
+    }
+}
